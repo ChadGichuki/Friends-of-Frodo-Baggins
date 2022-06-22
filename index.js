@@ -1,12 +1,19 @@
 // Let all page functionalities be called within this function
 document.addEventListener('DOMContentLoaded', (e) => {
-
+    // Fetch all book titles to display on Books Dropdown menu
+    get_all_books()
 })
 
+
+/**
+ * @name get_all_books
+ * @description Fetches books from database then adds them to the books dropdown menu on the navbar.
+ */
 function get_all_books(){
+
     fetch('https://the-one-api.dev/v2/book/', {
         headers: {
-            Authorization: PeGIFj72HpLkCPmwHO
+            Authorization: "PeGIFj72HpLkCPmwHO"
         }
     })
     .then(res => res.json())
@@ -19,11 +26,24 @@ function get_all_books(){
             const li = document.createElement('li')
             li.textContent = title
             li.id = book_id
-            li.className = "drop-down"
 
-            // Grad the dropdown menu and append
-            let ul = document.querySelector('#books ul')
-
+            // Grab the dropdown menu and append
+            let ul = document.querySelector('#books ul.sub-menu')
+            ul.appendChild(li)
         })
     })
+}
+
+function render_one_book(){
+    const li = document.querySelectorAll('ul.sub-menu li')
+    li.addEventListener('click', e => {
+        const book_id = li.id
+        fetch(`https://the-one-api.dev/v2/book/${book_id}`, {
+        headers: {
+            Authorization: "PeGIFj72HpLkCPmwHO"
+        }
+    })
+    .then(res => res.json())
+    })
+    
 }

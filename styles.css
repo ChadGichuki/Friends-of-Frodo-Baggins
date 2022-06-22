@@ -42,30 +42,30 @@
     border-radius: 4px;
 }
 
-.sub-menu {
+.navbar ul li .sub-menu {
     position: absolute;
-    top:3.5rem;
+    top: 3.8rem;
     background: rgba(37,51,64,0.7);
     display: none;
-    padding: 0em;
+    padding: 1em;
     margin: 0em;
     z-index: 1100;
 }
 
 .navbar ul li:hover > .sub-menu{
     display: block;
-    width: 14em;
+    width: 12em;
+    padding: 0em;
+    margin: 0em;
 }
 
-.sub-menu li {
-    width: 8em;
+.navbar ul li .sub-menu li {
     float: none;
     display: list-item;
     position: relative;
     margin: 0em;
-    padding: 0em;
-    line-height: 1.1em;
-    font-size: 1em;
+    padding: 0.5em 1em;
+    font-size: 1.1em;
 }
 
 .content {
