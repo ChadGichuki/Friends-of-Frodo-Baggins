@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&family=Domine&family=Fira+Sans:ital,wght@1,300&family=IM+Fell+French+Canon+SC&family=Kdam+Thmor+Pro&family=Titillium+Web:wght@300&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -17,23 +19,67 @@
 
 .navbar ul {
     float: right;
-    margin-right: 60px;
+    margin-right: 80px;
 }
 
 .navbar ul li {
     list-style: none;
-    margin: 20px 10px;
+    margin: 20px 15px;
     display: inline-block;
     padding: 5px 15px;
     line-height: 30px;
     color: white;
     transition: 0.5s;
     font-size: 22px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'IM Fell French Canon SC', serif;
+    font-style: bold;
     cursor: pointer;
 }
 
 .navbar ul li#home, .navbar ul li:hover {
     background: #A6896F;
     border-radius: 4px;
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 20%;
+}
+
+.left {
+    margin-left: 4%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.left h1 {
+    font-size: 80px;
+    line-height: 100px;
+    float: left;
+    user-select: none;
+    padding-bottom: 20px;
+}
+
+.left p {
+    float: left;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: left;
+    width: 600px;
+}
+
+.left p span {
+    float: right;
+    color: black;
+    margin-right: 40px;
+}
+
+.right {
+    margin-right: 10%;
+}
+
+.right h3 {
+    float: right;
 }
