@@ -50,8 +50,9 @@
 .left {
     margin-left: 4%;
     color: white;
-    display: flex;
-    flex-direction: column;
+    display:inline-block;
+    /*display: flex;
+    flex-direction: column;*/
 }
 
 .left h1 {
@@ -77,9 +78,14 @@
 }
 
 .right {
-    margin-right: 10%;
+    margin-right: 20px;
+    /*display: flex;*/
+    float: right;
+    width: 800px;
+    height: auto;
+    
 }
 
 .right h3 {
-    float: right;
+    color: #A6896F;
 }
