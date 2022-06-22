@@ -87,7 +87,7 @@
 }
 
 .details {
-    background: rgba(166, 137, 111, 0.7);
+    background: rgba(166, 137, 111, 0.5);
 }
 
 .details ul {
@@ -101,7 +101,7 @@
     line-height: 1.1em;
     text-align: center;
     border: black solid 1px;
-    box-shadow: 3px 4px #253340;
+    box-shadow: 5px -4px #253340;
 }
 
 .details ul img {
@@ -151,16 +151,21 @@
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.1em;
     line-height: 1.1em;
-    padding: 1em;
+    padding: 0.5em 1em;
 }
 
 #comments {
     font-family: 'Courier New', Courier, monospace;
     padding: 0em 1em;
+    border: #253340 solid 2px;
+    box-shadow: -5px 4px #253340;
 }
 
 #comments li {
     font-size: 1em;
     text-align: justify;
+    line-height: 1.5em;
+    padding: 0.5em 0em;
+
 }
 
