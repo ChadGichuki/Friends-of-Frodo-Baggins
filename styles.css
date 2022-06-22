@@ -15,6 +15,7 @@
     height: 5rem;
     width: 100%;
     background: rgba(37,51,64,0.7);
+    
 }
 
 .navbar ul {
@@ -39,6 +40,32 @@
 .navbar ul li#home, .navbar ul li:hover {
     background: #A6896F;
     border-radius: 4px;
+}
+
+.sub-menu {
+    position: absolute;
+    top:3.5rem;
+    background: rgba(37,51,64,0.7);
+    display: none;
+    padding: 0em;
+    margin: 0em;
+    z-index: 1100;
+}
+
+.navbar ul li:hover > .sub-menu{
+    display: block;
+    width: 14em;
+}
+
+.sub-menu li {
+    width: 8em;
+    float: none;
+    display: list-item;
+    position: relative;
+    margin: 0em;
+    padding: 0em;
+    line-height: 1.1em;
+    font-size: 1em;
 }
 
 .content {
