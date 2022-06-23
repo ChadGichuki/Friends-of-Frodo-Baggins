@@ -20,8 +20,11 @@ document.addEventListener('DOMContentLoaded', (e) => {
     // Displays character details when a character is clicked
     renderOneCharacter()
 
-    //Allow posting of favourite quote from the book/movie series
+    // Allow posting of favourite quote from the book/movie series
     postFavouriteQuote()
+
+    // Play or Pause Lord of The Rings Song
+    playPauseMusic()
 })
 
 
@@ -292,5 +295,21 @@ function postFavouriteQuote(){
         commentSection.appendChild(li)
 
         document.querySelector('form').reset()
+    })
+}
+
+
+function playPauseMusic(){
+    const song = document.getElementById('song')
+    const icon = document.getElementById('icon')
+
+    icon.addEventListener('click', e => {
+        if (song.paused){
+            song.play()
+            icon.src = "media/pause.png"
+        }else {
+            song.pause()
+            icon.src = "media/play.png"
+        }
     })
 }

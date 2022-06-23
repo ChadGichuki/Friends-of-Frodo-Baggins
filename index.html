@@ -4,13 +4,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link rel="stylesheet" href="styles.css">
         <title>Friends of Frodo Baggins</title>
     </head>
     <body>
         <div class="container">
             <div class="navbar">
-                <img class="icon" src="media/logo.jpg">
+                <img class="icon" src="media/logo.jpg" alt="Lord of the rings">
                 <ul>
                     <li id="home">Home</li>
                     <li id="books">Books
@@ -38,6 +39,11 @@
                         above hoarded gold, it would be a merrier world.”<br>
                         <span>– Thorin Oakenshield</span>
                     </p>
+                    <br>
+                    <img src="media/play.png" alt="play music icon" id="icon">
+                    <p class="listen">Click to listen</p>
+                    <br>
+                    <p class="listen">("Concerning Hobbits" - Howard Shore)</p>
                 </div>
                 <div class="right">
                     <div class="details">
@@ -69,7 +75,9 @@
                 </div>
             </div>
         </div>
-
+        <audio id="song">
+            <source src="media/Concerning-Hobbits.mp3" type="audio/mp3">
+        </audio>
         <script src="index.js"></script>
     </body>
 </html>
