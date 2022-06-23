@@ -18,9 +18,15 @@
     
 }
 
+.navbar img {
+    margin-left: 4%;
+    height: 5em;
+    width: auto;
+}
+
 .navbar ul {
     float: right;
-    margin-right: 7em;
+    margin-right: 8em;
 }
 
 .navbar ul li {
