@@ -11,7 +11,7 @@
     <body>
         <div class="container">
             <div class="navbar">
-                <img class="icon" src="#">
+                <img class="icon" src="media/logo.jpg">
                 <ul>
                     <li id="home">Home</li>
                     <li id="books">Books
@@ -47,18 +47,23 @@
                             <li><div class="title"></div></li>
                             <li>                                
                                 <form>
-                                    <label for="favourite">Your thoughts:</label><br>
-                                    <input name="favourite" value="" type="text" placeholder="Timeless classic..." class="user-input"><br>
+                                    <label for="favourite">Favourite Quote:</label><br>
+                                    <input name="favourite" value="" type="text" placeholder="My Precious..." class="user-input"><br>
+                                    <label for="character">Said By:</label><br>
+                                    <input name="character" value="" type="text" placeholder="Gollum" class="user-input"><br>
                                     <label for="name">Your Name:</label><br>
-                                    <input name="name" value="" type="text" placeholder="Gandalf..." class="user-input">
+                                    <input name="name" value="" type="text" placeholder="My name is" class="user-input">
                                     <input name="submit" value="POST" type="submit" class="post">
                                 </form>
                             </li>
                             <li>
                                 <p>What others said:</p>
-                                <ul id="comments">
-                                    <li></li>
-                                </ul>
+                                <div class="enable-scroll">
+                                    <ul id="comments">
+                                        <li>Richard: "Not all those who wander are lost." - Bilbo Baggins</li>
+                                        <!--User Input to go here-->
+                                    </ul>
+                                </div>
                             </li>
                         </ul>
                     </div>

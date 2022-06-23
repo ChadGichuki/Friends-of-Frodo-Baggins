@@ -19,6 +19,9 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
     // Displays character details when a character is clicked
     renderOneCharacter()
+
+    //Allow posting of favourite quote from the book/movie series
+    postFavouriteQuote()
 })
 
 
@@ -153,7 +156,7 @@ function renderOneMovie(){
             div.appendChild(h1)
 
             const p2 = document.createElement('p')
-            p2.textContentrenderOneCharacter() = `Academy Award Nominations: ${awardNominations}`
+            p2.textContent = `Academy Award Nominations: ${awardNominations}`
             div.appendChild(p2)
 
             const p3 = document.createElement('p')
@@ -260,9 +263,34 @@ function renderOneCharacter(){
             const p4 = document.createElement('p')
             p4.textContent = `Realm: ${realm}`
             div.appendChild(p1)
+
+
         })
     })
         })
     })
 }, 4000)
+}
+
+/**
+ * @name postFavouriteQuote
+ * @desription Grabs value from submitted form and appends to DOM asynchronously
+ */
+function postFavouriteQuote(){
+    let form = document.querySelector('form')
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        let userName = form.querySelectorAll('input')[2].value
+        let favouriteQuote = form.querySelectorAll('input')[0].value
+        let quoteBy = form.querySelectorAll('input')[1].value
+
+        let commentSection = document.querySelector('#comments')
+
+        let li = document.createElement('li')
+        li.textContent = `${userName}: "${favouriteQuote}." -${quoteBy}`
+
+        commentSection.appendChild(li)
+
+        document.querySelector('form').reset()
+    })
 }
