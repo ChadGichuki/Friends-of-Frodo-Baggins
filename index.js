@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', (e) => {
     // Fetch all movie title to dispaly on Movies Dropdown menu
     getAllMovies()
 
+    // Fetch afew characters to display on Characters Dropdown menu
+    getSomeCharacters()
+
     // Displays book details once book title is clicked
     renderOneBook()
 
     // Displays movie details when movie title is clicked
     renderOneMovie()
-
-    // Fetch afew characters to display on Characters Dropdown menu
-    getSomeCharacters()
 
     // Displays character details when a character is clicked
     renderOneCharacter()
@@ -25,6 +25,9 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
     // Play or Pause Lord of The Rings Song
     playPauseMusic()
+
+    // Enable deleting of comments/favourite quotes added to comment section
+    deleteComments()
 })
 
 
@@ -33,7 +36,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
  * @description Fetches books from database then adds them to the books dropdown menu on the navbar.
  */
 function getAllBooks(){
-
     fetch('https://the-one-api.dev/v2/book/', {
         headers: {
             Authorization: "Bearer PeGIFj72HpLkCPmRuwHO"
@@ -66,7 +68,6 @@ function renderOneBook(){
         const li_items = document.querySelectorAll('#books ul.sub-menu li')
         li_items.forEach(li=> {
         li.addEventListener('click', e => {
-            console.log(e)
             const bookId = li.id
             fetch(`https://the-one-api.dev/v2/book/${bookId}`, {
             headers: {
@@ -75,7 +76,6 @@ function renderOneBook(){
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data)
             const id = data["docs"][0]._id
             const title= data["docs"][0].name
 
@@ -131,7 +131,6 @@ function renderOneMovie(){
         const li_items = document.querySelectorAll('#movies ul.sub-menu li')
         li_items.forEach(li => {
         li.addEventListener('click', e => {
-            console.log(e)
             const movieId = li.id
             fetch(`https://the-one-api.dev/v2/movie/${movieId}`, {
             headers: {
@@ -181,7 +180,6 @@ function renderOneMovie(){
             const p7 = document.createElement('p')
             p7.textContent = `Runtime: ${length} minutes`
             div.appendChild(p7)
-
         })
         })
     })
@@ -242,8 +240,7 @@ function renderOneCharacter(){
             const realm = character.realm
 
             // Selct Div to Append to on DOM
-            // Clear any previous content and append
-
+            // Clear any previous content and append new content
             const div = document.querySelector('li div.title')
             div.innerHTML=""
 
@@ -266,8 +263,6 @@ function renderOneCharacter(){
             const p4 = document.createElement('p')
             p4.textContent = `Realm: ${realm}`
             div.appendChild(p1)
-
-
         })
     })
         })
@@ -287,10 +282,15 @@ function postFavouriteQuote(){
         let favouriteQuote = form.querySelectorAll('input')[0].value
         let quoteBy = form.querySelectorAll('input')[1].value
 
-        let commentSection = document.querySelector('#comments')
+        // Create delete icon for each comment
+        const deleteIcon = document.createElement('img')
+        deleteIcon.src = "media/delete.png"
 
+        //Append to coments section
+        let commentSection = document.querySelector('#comments')
         let li = document.createElement('li')
-        li.textContent = `${userName}: "${favouriteQuote}." -${quoteBy}`
+        li.textContent = `${userName}: "${favouriteQuote}." -${quoteBy}  `
+        li.appendChild(deleteIcon)
 
         commentSection.appendChild(li)
 
@@ -298,7 +298,10 @@ function postFavouriteQuote(){
     })
 }
 
-
+/**
+ * @name playPauseMusic
+ * @description Plays or Pauses The Iconic Hobbit Song
+ */
 function playPauseMusic(){
     const song = document.getElementById('song')
     const icon = document.getElementById('icon')
@@ -311,5 +314,14 @@ function playPauseMusic(){
             song.pause()
             icon.src = "media/play.png"
         }
+    })
+}
+
+function deleteComments(){
+    let deleteIcons = document.querySelectorAll('#comments img')
+    deleteIcons.forEach(icon => {
+        icon.addEventListener('click', (e) => {
+            e.target.parentElement.remove()
+        })
     })
 }
