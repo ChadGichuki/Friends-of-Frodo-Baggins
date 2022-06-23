@@ -71,7 +71,7 @@
 .content {
     width: 100%;
     position: absolute;
-    top: 20%;
+    top: 10%;
 }
 
 .left {
@@ -131,14 +131,21 @@
     box-shadow: 5px -4px #253340;
 }
 
-.details ul img {
+.details ul div.title {
     width: auto;
-    height: 12em;
+    height: auto;
     justify-self: center;
-    background: white;
+    background: rgba(255, 255, 255, 0.5);
     padding: 1rem;
-    margin-left: 1.2em;
+    margin: 1.2em;
+    color: #000;
 }
+
+.details ul div.title h1 {
+    font-size: 2em;
+    font-family: 'IM Fell French Canon SC', serif;
+}
+
 
 .details ul form {
     width: 90%;
@@ -153,6 +160,11 @@
     margin: 4px;
     font-family: 'Courier New', Courier, monospace;
     padding-left: 1em;
+}
+
+.details ul form label {
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 1rem;
 }
 
 .post {
@@ -196,3 +208,6 @@
 
 }
 
+.hidden {
+    display: none;
+}

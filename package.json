@@ -1,0 +1,21 @@
+{
+  "name": "friends-of-frodo-baggins",
+  "version": "1.0.0",
+  "description": "A Lord Of The Rings Fanpage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChadGichuki/Friends-of-Frodo-Baggins.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChadGichuki/Friends-of-Frodo-Baggins/issues"
+  },
+  "homepage": "https://github.com/ChadGichuki/Friends-of-Frodo-Baggins#readme",
+  "type": "module"
+}
