@@ -6,7 +6,8 @@ This is a Single Page Application (SPA) where fans of the epic fantasy series by
 Vew the web page, hosted on Github pages [here.](https://chadgichuki.github.io/Friends-of-Frodo-Baggins/)
 
 You should expect to see a page like this:
-![Landing Page]("./media/landing-page.png")
+
+<img src="https://github.com/ChadGichuki/Friends-of-Frodo-Baggins/blob/main/media/landing-page.png" height="500">
 
 
 ## Getting Started
@@ -46,9 +47,13 @@ headers: {
 ## Deployment
 The app is not hosted elsewhere apart from Github pages.
 
+## Licence
+A copy of the General Public License v3.0 can be found [here.](LICENSE)
+
 ## Authors
 Richard Gichuki. [Find me here.](https://github.com/ChadGichuki)
 
 ## Acknowledgements
+Grace Umutesi - Technical Mentor, Moringa School, Fullstack Software Engineering Course, May to October 2022.
 
 

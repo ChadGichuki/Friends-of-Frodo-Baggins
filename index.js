@@ -317,6 +317,10 @@ function playPauseMusic(){
     })
 }
 
+/**
+ * @name deleteComments
+ * @description Allows user to delete the favourite quote posted on the screen.
+ */
 function deleteComments(){
     let deleteIcons = document.querySelectorAll('#comments img')
     deleteIcons.forEach(icon => {
