@@ -290,11 +290,14 @@ function postFavouriteQuote(){
         let commentSection = document.querySelector('#comments')
         let li = document.createElement('li')
         li.textContent = `${userName}: "${favouriteQuote}." -${quoteBy}  `
+
         li.appendChild(deleteIcon)
 
         commentSection.appendChild(li)
 
         document.querySelector('form').reset()
+        
+        deleteComments()
     })
 }
 
@@ -322,7 +325,7 @@ function playPauseMusic(){
  * @description Allows user to delete the favourite quote posted on the screen.
  */
 function deleteComments(){
-    let deleteIcons = document.querySelectorAll('#comments img')
+    let deleteIcons = document.querySelectorAll('#comments li img')
     deleteIcons.forEach(icon => {
         icon.addEventListener('click', (e) => {
             e.target.parentElement.remove()
