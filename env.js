@@ -1,3 +1,1 @@
-const api_key = "PeGIFj72HpLkCPmRuwHO";
-
-export default api_key
+export const api_key = "Bearer PeGIFj72HpLkCPmRuwHO"

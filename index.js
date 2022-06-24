@@ -1,4 +1,4 @@
-//import api_key from './env.js';
+import { api_key } from './env.js';
 
 
 document.addEventListener('DOMContentLoaded', (e) => {
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 function getAllBooks(){
     fetch('https://the-one-api.dev/v2/book/', {
         headers: {
-            Authorization: "Bearer PeGIFj72HpLkCPmRuwHO"
+            Authorization: api_key
         }
     })
     .then(res => res.json())
@@ -71,7 +71,7 @@ function renderOneBook(){
             const bookId = li.id
             fetch(`https://the-one-api.dev/v2/book/${bookId}`, {
             headers: {
-                Authorization: "Bearer PeGIFj72HpLkCPmRuwHO"
+                Authorization: api_key
             }
         })
         .then(res => res.json())
@@ -100,7 +100,7 @@ function renderOneBook(){
 function getAllMovies(){
     fetch('https://the-one-api.dev/v2/movie/', {
         headers: {
-           Authorization: "Bearer PeGIFj72HpLkCPmRuwHO"
+           Authorization: api_key
         }
     })
     .then(res => res.json())
@@ -134,7 +134,7 @@ function renderOneMovie(){
             const movieId = li.id
             fetch(`https://the-one-api.dev/v2/movie/${movieId}`, {
             headers: {
-                Authorization: "Bearer PeGIFj72HpLkCPmRuwHO"
+                Authorization: api_key
             }
         })
         .then(res => res.json())
@@ -194,7 +194,7 @@ function renderOneMovie(){
 function getSomeCharacters(){
     fetch('https://the-one-api.dev/v2/character?name=Gandalf,Frodo Baggins,Aragorn II Elessar,Gollum,Legolas,Sauron,Samwise Gamgee', {
         headers: {
-            Authorization: "Bearer PeGIFj72HpLkCPmRuwHO"
+            Authorization: api_key
         }
     })
     .then(res => res.json())
@@ -227,7 +227,7 @@ function renderOneCharacter(){
             const id = li.id
             fetch(`https://the-one-api.dev/v2/character/${id}`, {
             headers: {
-                Authorization: "Bearer PeGIFj72HpLkCPmRuwHO"
+                Authorization: api_key
             }
         })
         .then(res => res.json())
